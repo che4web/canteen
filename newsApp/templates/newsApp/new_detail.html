@@ -1,0 +1,61 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<section class="section_news">
+    <ol class="breadcrumb">
+        <li><a href="../../">Главная</a></li>
+        <li><a href="../">Наши новости</a></li>
+        <li class="active">{{ object.title }}</li>
+    </ol>
+
+    <div class="container">
+        
+        <h2>{{ object.title }}</h2>
+
+        <h2 class="section_news__date">( {{ new.date }} ) </h2>
+        
+        <div class="section_news__text">
+            <h3>{{ object.text }}</h3>
+        </div>
+        <div class="section_news__photos">
+
+
+
+            <img src="{% static 'img_sources/w1.jpg'%}"/>
+            <img src="{% static 'img_sources/w2.jpg'%}"/>
+            <img src="{% static 'img_sources/w3.jpg'%}"/>
+            <img src="{% static 'img_sources/w3.jpg'%}"/>
+            <img src="{% static 'img_sources/w3.jpg'%}"/>
+            <img src="{% static 'img_sources/w3.jpg'%}"/>
+            {%for ph in object.New_Photos_set.all%}
+                <img src="{% static 'img_sources/h1.jpg'%}"/>
+                     {#{{ph.get_photo}}" />#}
+            {%endfor%}
+            
+        </div>
+        
+        {#{%for new in object_list%}
+            <div class="our-news__oneNew" style="text-align:center">
+                <div class="row our-news__oneNew__date">
+                 {{ new.date }}
+                </div>
+                <div class="row our-news__oneNew__title">
+                 <a href="{{new.get_absolute_url}}">{{ new.title }}</a>
+                </div>
+                <div class="row">
+                    <img src="{% static 'img_sources/holiday.jpg'%}" />
+                </div>
+                <div class="row our-news__oneNew__text">
+                    {{new.text}}
+                </div>
+            </div>
+            <hr />
+        {%endfor%}#}
+
+    </div>
+</section>
+
+{% endblock %}

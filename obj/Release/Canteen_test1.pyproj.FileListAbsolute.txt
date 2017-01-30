@@ -1,0 +1,7 @@
+D:\VS_Projects\python\Canteen\Canteen_test1\Canteen_test1\bin\Microsoft.PythonTools.WebRole.dll
+D:\VS_Projects\python\Canteen\Canteen_test1\Canteen_test1\bin\AzureSetup.cfg
+D:\VS_Projects\python\Canteen\Canteen_test1\Canteen_test1\bin\Microsoft.PythonTools.AzureSetup.exe
+D:\VS_Projects\python\Canteen\Canteen_test1\Canteen_test1\bin\Microsoft.PythonTools.AzureSetup.exe.config
+D:\VS_Projects\python\Canteen\Canteen_test1\Canteen_test1\bin\wfastcgi.py
+D:\VS_Projects\python\Canteen\Canteen_test1\Canteen_test1\obj\Release\web.config
+D:\VS_Projects\python\Canteen\Canteen_test1\Canteen_test1\obj\Release\web.debug.config

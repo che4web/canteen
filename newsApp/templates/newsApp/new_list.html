@@ -1,0 +1,37 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+
+<section class="our-news">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="../">Главная</a></li>
+            <li class="active">Наши новости</li>
+        </ol>
+
+        <h2 style="text-align:center">{{ title }}</h2>
+
+        {%for new in object_list%}
+            <div class="our-news__oneNew" style="text-align:center">
+                <div class="row our-news__oneNew__date">
+                 {{ new.date }}
+                </div>
+                <div class="row our-news__oneNew__title">
+                 <a href="{{new.get_absolute_url}}">{{ new.title }}</a>
+                </div>
+                <div class="row">
+                    <img src="{% static 'img_sources/holiday.jpg'%}" />
+                </div>
+                <div class="row our-news__oneNew__text">
+                    {{new.text}}
+                </div>
+            </div>
+            <hr />
+        {%endfor%}
+    </div>
+</section>
+
+{% endblock %}

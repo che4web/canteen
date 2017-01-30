@@ -163,7 +163,6 @@ section h2::after{
 .main__menu__block__main{
     padding-left:10%;
     padding-right:10%;
-    background: url(../../../static/img_sources/paper-white.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -565,7 +564,13 @@ footer{
     max-height:30px;
     background-size:cover;
     padding:1%;
-    }
+}
+
+.section_news__photos
+{
+    text-align:center;
+    margin:0 auto;
+}
 
 .section_news__photos img{
     height:auto;
@@ -573,6 +578,6 @@ footer{
     max-width:350px;
     max-height:700px;
     background-size:cover;
-    border: 20px solid #6F5858;
+    border: 10px solid #6F5858;
     }
 

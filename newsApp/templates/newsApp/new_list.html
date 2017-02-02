@@ -23,7 +23,11 @@
                  <a href="{{new.get_absolute_url}}">{{ new.title }}</a>
                 </div>
                 <div class="row">
-                    <img src="{% static 'img_sources/holiday.jpg'%}" />
+                    {%for ph in object.New_Photos_set.all%}
+                        {%if ph.isDefault%}
+                            <img src={{ph.get_photo}}/>
+                        {%endif%}
+                    {%endfor%}
                 </div>
                 <div class="row our-news__oneNew__text">
                     {{new.text}}

@@ -33,6 +33,7 @@ class New(models.Model):
 class New_Photos(models.Model):
     text = models.TextField(verbose_name=u'текст к фото если нужен')
     photo = models.ImageField(blank=True,verbose_name=u'фото')
+    isDefault = models.BooleanField(verbose_name=u'обложка альбома')
     new = models.ForeignKey(New,verbose_name=u'фото относится к этой нвоости \ событию')   
     
     

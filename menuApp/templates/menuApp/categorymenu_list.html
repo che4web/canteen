@@ -10,36 +10,28 @@
         </ol>
     
 
-    <h2 style="text-align:center">{{ title }}</h2>
+        <h2 style="text-align:center"><span>{{ title }}</span></h2>
 
-    <div class="our-menu__dishes">
-        {%for ls in object_list_1%}
-            <div class="col-md-6">
-            {%for category in ls%}
-                <h3>{{category.title}}</h3>
-                {%for dsh in category.dish_set.all%}
-                    <div class="row dsh-menu-row">
-                        <div class="col-md-1 dsh-menu-row-inner">
-                            <img src="{{dsh.get_img}}">
-                        </div>
-                        <div class="col-md-11 dsh-menu-row-inner">
-                            <h4>{{ dsh.name }}</h4>
-                        </div>
-                    </div>
-                    <div class="row dsh-menu-dbl-row">
-                        <div class="col-md-8">
-                        {{ dsh.descr }}
-                        </div>
-                        <div class="col-md-4 dsh-price">
-                        {{ dsh.price }}
+        <div class="our-menu__dishes">
+            {%for ls in object_list_1%}
+                {%for category in ls%}
+                    <div class="dish-cat">
+                        <h3>{{category.title}}</h3>
+                        <div class="row dish-cat-one">
+                            {%for dsh in category.dish_set.all%}
+                                <div class="one-dish">
+                                    <img src="{{dsh.get_img}}">
+                                    <h4>{{ dsh.name }}</h4>
+                                    <h5>{{ dsh.descr }}</h5>
+                                    <div class="row dsh-price">{{ dsh.price }}</div>
+                                </div>
+                            {%endfor%}
                         </div>
                     </div>
                 {%endfor%}
             {%endfor%}
-            </div>
-        {%endfor%}
         </div>
-        </div>
+    </div>
 
-    </section>
+</section>
 {% endblock %}

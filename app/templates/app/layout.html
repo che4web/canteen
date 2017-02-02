@@ -3,10 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - Столовая</title>
+    <title>Столовая № 1 Кунгур</title>
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'app/font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/styles.css' %}" />
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Josefin+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
@@ -16,18 +18,11 @@
      <script src="{% static 'app/scripts/jquery.viewportchecker.js' %}"></script>
 </head>
 
-<body>
-    <!--<div class="container-fluid body-content container-fluid-main">-->
-    <!--<div>-->
-        {% block content %}{% endblock %}
-        <hr/>
-        <footer>
-        </footer>
-    <!--</div>-->
-
+<body data-spy="scroll" data-target="#main-navbar">
+    {% block content %}{% endblock %}
    
     <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
     <script src="{% static 'app/scripts/respond.js' %}"></script>
-{% block scripts %}{% endblock %}
+    {% block scripts %}{% endblock %}
 </body>
 </html>

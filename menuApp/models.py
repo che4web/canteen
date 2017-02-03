@@ -1,3 +1,4 @@
+#! -*- coding=utf8 -*-
 from django.db import models
 
 DEFAULT_PHOTO = "/static/img_sources/default_dish.png"

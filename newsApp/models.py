@@ -24,6 +24,8 @@ class New(models.Model):
     def get_absolute_url(self):
         return ('news-detail', [self.id])
 
+    def __str__(self):
+        return self.title
     class Meta:
         verbose_name=u"Новость"
         verbose_name_plural=u"Новости"

@@ -23,7 +23,7 @@
                  <a href="{{new.get_absolute_url}}">{{ new.title }}</a>
                 </div>
                 <div class="row">
-                    {%for ph in object.New_Photos_set.all%}
+                    {%for ph in object.new_photos_set.all%}
                         {%if ph.isDefault%}
                             <img src={{ph.get_photo}}/>
                         {%endif%}

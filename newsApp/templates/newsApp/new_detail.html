@@ -21,21 +21,18 @@
             <h3>{{ object.text }}</h3>
         </div>
         <div class="section_news__photos">
+            {%for ph in object.new_Pphotos_set.all%}
+                <img src={{ph.get_photo}}/>
+            {%endfor%}
+            
+        </div>
 
-
-
-            <img src="{% static 'img_sources/w1.jpg'%}"/>
+        {#<img src="{% static 'img_sources/w1.jpg'%}"/>
             <img src="{% static 'img_sources/w2.jpg'%}"/>
             <img src="{% static 'img_sources/w3.jpg'%}"/>
             <img src="{% static 'img_sources/w3.jpg'%}"/>
             <img src="{% static 'img_sources/w3.jpg'%}"/>
-            <img src="{% static 'img_sources/w3.jpg'%}"/>
-            {%for ph in object.New_Photos_set.all%}
-                <img src="{% static 'img_sources/h1.jpg'%}"/>
-                     {#{{ph.get_photo}}" />#}
-            {%endfor%}
-            
-        </div>
+            <img src="{% static 'img_sources/w3.jpg'%}"/>#}
         
         {#{%for new in object_list%}
             <div class="our-news__oneNew" style="text-align:center">

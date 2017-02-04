@@ -13,12 +13,12 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <div class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse" id="main-menu">
             <ul class="nav navbar-nav navbar-right main-navbar-right">
                 <li><a href="#OurMenu">Меню</a></li>
                 <li><a href="#OurNews">Новости</a></li>
+                <li class="menu-icon"><a href="#Order"><i class="fa fa-shopping-cart fa-shopping-cart-icon" aria-hidden="true"></i>Заказать</a></li>
                 <li><a href="#OurAddress">Контакты</a></li>
-                <li><a href="#Order"><i class="fa fa-shopping-cart fa-shopping-cart-icon" aria-hidden="true"></i>Заказать</a></li>
             </ul>
         </div>
     </div>
@@ -175,62 +175,54 @@
 
 </div>
 <section class="our-address-section hidden_block" id="OurAddress">
-    <h2><span>МЫ</span></h2>
+    <h2><span>СВЯЖИТЕСЬ С НАМИ</span></h2>
     <div class="our-address-section-text">
         <div>
             <address>
                 г. Кунгур<br />
                 ул. такая-то, д. такой-то<br />
-                <abbr title="Телефон">Т: +7 987 654 32 10 </abbr>
+                <a href="tel:+7 (987) 654 3210">+7 (987) 654 3210</a>
             </address>
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4296.100053571176!2d56.94502677903512!3d57.42637527413549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e869c98fe7a175%3A0xa52eeb6edd54e58d!2z0JPRgNC-0YIsINC60LDRhNC1!5e0!3m2!1sru!2sru!4v1475915591497" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
-        <div class="section-bottom">
-        </div>
 </section>
-
+<!--
 <div class="container">
-        <div class="row contact-page">
-            <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="row">
-                    <div class="col-md-4 contact-page__contacts__icon">
-                        <i class="glyphicon glyphicon-earphone"></i>
-                    </div>
-                    <div class="col-md-8 contact-page__contacts__descr">
-                            <a href="tel:+7(000) 654-32-10">+7(000) 654-32-10</a>
-                            <br>
-                    </div>
+    <div class="contact-page">
+        <div class="row contact-page-inner-1">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="contact-page-block">
+                    <a href="tel:+7(000) 654-32-10">
+                        <div class="col-md-4 contact-page__contacts__icon">
+                            <i class="glyphicon glyphicon-earphone"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="alt-features-item-1 align-center">
-                    <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="contact-page-block">
+                    <a href="vk.com">
                         <div class="col-md-4 contact-page__contacts__icon">
                             <i class="fa fa-vk" aria-hidden="true"></i>
                         </div>
-                        <div class="col-md-8 contact-page__contacts__descr">
-                            <a href="vk.com">мы в ВК</a>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="alt-features-item-1 align-center">
-                    <div class="row">
-                        <div class="col-md-4 contact-page__contacts__icon">
-                        <i class="glyphicon glyphicon-credit-card"></i>
-                            </div>
-                            <div class="col-md-8 contact-page__contacts__descr">
-                                <a href="mailto:Support@example.com">Support@example.com</a>
-                            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="contact-page-block">
+                <a href="mailto:Support@example.com">
+                    <div class="col-md-4 contact-page__contacts__icon">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
                     </div>
-                </div>
+                </a>
+            </div>
             </div>
         </div>
+    </div>
+
 </div>
+    -->
 
 
 
@@ -240,7 +232,7 @@
                 {
                     classToAdd: 'visible', // Class to add to the elements when they are visible,
                     classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
-                    offset: 250
+                    offset: 150
                 }
             );
         });
@@ -289,7 +281,7 @@
         });
 
         $(document).ready(function(){
-            $("#main__menu").on("click", "a", function (event) {
+            $("#main-menu").on("click", "a", function (event) {
                 //отменяем стандартную обработку нажатия по ссылке
                 event.preventDefault();
                 //забираем идентификатор бока с атрибута href

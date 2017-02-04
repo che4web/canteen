@@ -2,9 +2,13 @@
     background-color:#f3f0e9;
 }
 
-.body-content{
-    margin-top:5%;
+.container.contact{
+        border-top: 1px solid #ff7c90;
 }
+
+/*.body-content{
+    margin-top:5%;
+}*/
 
 .main-navbar, .logo-main{
     font-family: Arial;
@@ -23,9 +27,13 @@
     color: #ff7c90;
 }
 
-.main-navbar-right > li:last-child > a{
-    padding-left:20%;
+.main-navbar .navbar-toggle .icon-bar {
+    background-color: #6F5858;
 }
+
+/*.main-navbar-right > li:last-child > a{
+    padding-left:20%;
+}*/
 
 .main-navbar .active > a:after {
     display: block;
@@ -37,6 +45,11 @@
 
     opacity: 1;
     transition: opacity 0.5s linear;
+
+}
+
+.main-navbar .menu-icon.active > a:after {
+    margin-top:6%;
 
 }
 
@@ -59,8 +72,16 @@
 
 }
 
-.main-navbar-right > li:last-child > a:after{
+/*.main-navbar-right > li:last-child > a:after{
     margin-top:2%;
+}*/
+
+.menu-icon{
+    margin-top:-1%;
+}
+
+.menu-icon > li > a:after{
+    margin-top:-1%;
 }
 
 .main-navbar-right > li > a:hover:after,
@@ -80,6 +101,9 @@
     color:#fff;
 }
 
+
+
+
 .logo-main-img, .logo-main-adress{
     max-height:50%;
 }
@@ -98,7 +122,7 @@
 .logo-main-adress{
     padding:10%;
     text-align:center;
-    font-size: 3em;
+    font-size: 38px;
 }
 
 .main-description{
@@ -106,7 +130,86 @@
     color: #6F5858;
     font-family: 'Lobster', cursive;
     font-size: 20px;
-    margin-top:5%;
+    margin-top:15%;
+}
+
+@media (max-width: 1701px) {
+    .logo-main-adress {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 990px) {
+    .logo-main-adress {
+        font-size: 20px;
+    }
+    .logo-main {
+        height: 32%;
+    }
+}
+
+
+@media (max-width: 780px){
+.logo-main{
+    position:absolute;
+    width:45%;
+    height:42%;
+    background-color:rgba(0,0,0,0.5);
+    top:15%;
+    left:10%;
+    color:#fff;
+
+}
+.logo-main-img, .logo-main-adress{
+    max-height:50%;
+}
+
+.logo-main-adress {
+    padding:5%;
+}
+
+.logo-main-img{
+    padding: 10% 25% 0 25%;
+}
+
+.logo-main-img img {
+        height: auto;
+        width: 100%;
+        max-height: 100%;
+        background-size: cover;
+}
+
+.logo-main-adress{
+    padding:10%;
+    text-align:center;
+    font-size: 20px;
+    padding-top: 18%;
+}
+.main-description {
+    margin-top: 10%;
+}
+}
+
+@media (max-width: 690px) {
+    .main-description {
+        margin-top: 30%;
+    }
+}
+
+@media (max-width: 516px) {
+    .main-description {
+        margin-top: 40%;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .main-description {
+        margin-top: 58%;
+    }
+    .logo-main{
+        height:30%;
+    }
 }
 
 /*MAIN PART*/
@@ -123,6 +226,8 @@ section{
 .section-bottom{
     border-top:1px solid #ff7c90;
     text-align:left;
+    margin-left: -5%;
+    margin-right: -5%;
 }
 
 .section-bottom .btn{
@@ -138,6 +243,8 @@ section h2{
     text-decoration:none;
     text-transform: uppercase;
     background: transparent;
+    margin-bottom:7%;
+    margin-top:5%;
 }
 
 section h2 span{
@@ -248,10 +355,29 @@ section h2 span{
 
 .contact-page{
     color:#6F5858;
-    margin-bottom:5%;
-    margin-top:3%;
+    margin: 3%;
     font-size: 19px;
     font-weight: 300;
+}
+
+.contact-page-inner{
+    display:block;
+    margin:20% 0;
+    /*text-align:center;
+    float:initial;
+    vertical-align: middle;
+    display: table-cell;
+    width:50%;
+    display:block;
+    position: relative;*/
+}
+
+.our-address-section-text a{
+    color:inherit;
+}
+
+.our-address-section h2{
+    margin-bottom:3%;
 }
 
 
@@ -273,8 +399,10 @@ section h2 span{
 }
 
 .contact-page__contacts__icon i{
-    padding-top:10px;
-    padding-bottom:10px;
+    /*padding-top:10px;*/
+    /*padding-bottom:10px;*/
+    /*margin: 0 auto;*/
+    margin: 48% auto
 }
 
 .contact-page__map iframe{
@@ -300,6 +428,12 @@ section h2 span{
 
 .contact-page__contacts__descr a {
     color: #6F5858;
+}
+
+.contact-page-block{
+    /*float:left;*/
+    /*margin: 0 3%;*/
+
 }
 
 .contact-page__contacts__descr a:visited {
@@ -345,4 +479,8 @@ section h2 span{
     font-style:italic;
     text-align: center;
     color: #ff7c90;
+}
+
+.contact-page-inner-1{
+    padding:0 20%;
 }

@@ -21,8 +21,45 @@
 <body data-spy="scroll" data-target="#main-navbar">
     {% block content %}{% endblock %}
    
+
+    <div class="container contact">
+    <div class="contact-page">
+        <div class="row contact-page-inner-1">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="contact-page-block">
+                    <a href="tel:+7(000) 654-32-10">
+                        <div class="col-md-4 contact-page__contacts__icon">
+                            <i class="glyphicon glyphicon-earphone"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="contact-page-block">
+                    <a href="http://vk.com">
+                        <div class="col-md-4 contact-page__contacts__icon">
+                            <i class="fa fa-vk" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="contact-page-block">
+                <a href="mailto:Support@example.com">
+                    <div class="col-md-4 contact-page__contacts__icon">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </div>
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
     <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
     <script src="{% static 'app/scripts/respond.js' %}"></script>
     {% block scripts %}{% endblock %}
 </body>
+
 </html>

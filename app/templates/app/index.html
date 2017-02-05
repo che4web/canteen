@@ -149,7 +149,7 @@
         <h3>оставьте заявку на проведение праздника, расскажите о своих пожеланиях или просто оставьте свой отзыв</h3>
         <div>
                 <form class="form-horizontal form-order" action="/sender" method="POST" role="form">
-                    
+                    {%csrf_token%}
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="inputName" class="col-sm-2 control-label">Имя</label>

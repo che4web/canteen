@@ -1,3 +1,5 @@
+#! -*- coding=utf-8 -*-
+
 """
 WSGI config for Canteen_test1 project.
 

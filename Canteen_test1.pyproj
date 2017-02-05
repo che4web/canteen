@@ -4,6 +4,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>Canteen_test1</Name>
     <RootNamespace>Canteen_test1</RootNamespace>
+    <NameOfLastUsedPublishProfile>canteen</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -196,6 +197,7 @@
     <Content Include="app\static\img_sources\carusel\slider1.jpg" />
     <Content Include="app\static\img_sources\carusel\slider2.jpg" />
     <Content Include="app\static\img_sources\carusel\slider3.jpg" />
+    <None Include="canteen.pubxml" />
     <Content Include="menuApp\templates\index.html" />
     <Content Include="menuApp\templates\menuApp\categorymenu_list.html" />
     <Content Include="menuApp\templates\menuApp\dish_list.html" />

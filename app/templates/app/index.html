@@ -105,25 +105,37 @@
         </div>
     </section>
     <section class="our-news-section hidden_block" id="OurNews">
-        <h2><span>Последние новости</span></h2>
+        <h2><span>Последние новости и события</span></h2>
         <div class="our-news-section-text">
             <div class="row main__news__topnews">
                 <div class="col-md-4 main__news__topnews_N hidden_block">
                     <a href="{{news.0.get_absolute_url}}">
                         {{news.0.title}}
-                        <img src="{% static 'img_sources/h1.jpg'%}" />
+                        {%for ph in news.0.new_photos_set.all%}
+                            {%if ph.isDefault%}
+                                <img src={{ph.get_photo}}/>
+                            {%endif%}
+                        {%endfor%}
                     </a>
                 </div>
                 <div class="col-md-4 main__news__topnews_N hidden_block">
-                    <a href="{{news.0.get_absolute_url}}">
+                    <a href="{{news.1.get_absolute_url}}">
                         {{news.1.title}}
-                        <img src="{% static 'img_sources/h2.jpg'%}" />
+                        {%for ph in news.1.new_photos_set.all%}
+                            {%if ph.isDefault%}
+                                <img src={{ph.get_photo}}/>
+                            {%endif%}
+                        {%endfor%}
                     </a>
                 </div>
                 <div class="col-md-4 main__news__topnews_N hidden_block">
-                    <a href="{{news.0.get_absolute_url}}">
+                    <a href="{{news.2.get_absolute_url}}">
                         {{news.2.title}}
-                        <img src="{% static 'img_sources/h3.jpg'%}" />
+                        {%for ph in news.2.new_photos_set.all%}
+                            {%if ph.isDefault%}
+                                <img src={{ph.get_photo}}/>
+                            {%endif%}
+                        {%endfor%}
                     </a>
                 </div>
             </div>
@@ -133,9 +145,10 @@
         </div>
 </section>
     <section class="order-section hidden_block  mdl-shadow--4dp" id="Order">
-        <h2><span>Сделать заказ праздника</span></h2>
+        <h2><span>Напишите нам</span></h2>
+        <h3>оставьте заявку на проведение праздника, расскажите о своих пожеланиях или просто оставьте свой отзыв</h3>
         <div>
-                <form class="form-horizontal form-order" role="form">
+                <form class="form-horizontal form-order" action="/sender" method="POST" role="form">
                     
                     <div class="modal-body">
                         <div class="form-group">
@@ -227,58 +240,59 @@
 
 
 <script>
-        $(document).ready(function () {
-            $('.our-news-section').viewportChecker(
-                {
-                    classToAdd: 'visible', // Class to add to the elements when they are visible,
-                    classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
-                    offset: 150
-                }
-            );
-        });
 
-        $(document).ready(function () {
-            $('.main__news__topnews_N').viewportChecker(
-                {
-                    classToAdd: 'visible', // Class to add to the elements when they are visible,
-                    classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
-                    offset: 350
-                }
-            );
-        });     
+        //$(document).ready(function () {
+        //    $('.our-news-section').viewportChecker(
+        //        {
+        //            classToAdd: 'visible', // Class to add to the elements when they are visible,
+        //            classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
+        //            offset: 150
+        //        }
+        //    );
+        //});
 
-        $(document).ready(function () {
-            $('.our-menu-section').viewportChecker(
-                {
-                    classToAdd: 'visible', // Class to add to the elements when they are visible,
-                    classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
-                    // classToRemove: 'hidden_block', // Class to remove before adding 'classToAdd' to the elements);.
-                    offset: 400
-                }
-            );
-        });
+        //$(document).ready(function () {
+        //    $('.main__news__topnews_N').viewportChecker(
+        //        {
+        //            classToAdd: 'visible', // Class to add to the elements when they are visible,
+        //            classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
+        //            offset: 350
+        //        }
+        //    );
+        //});     
 
-        $(document).ready(function () {
-            $('.order-section').viewportChecker(
-                {
-                    classToAdd: 'visible', // Class to add to the elements when they are visible,
-                    classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
-                    // classToRemove: 'hidden_block', // Class to remove before adding 'classToAdd' to the elements);.
-                    offset: 450
-                }
-            );
-        });
+        //$(document).ready(function () {
+        //    $('.our-menu-section').viewportChecker(
+        //        {
+        //            classToAdd: 'visible', // Class to add to the elements when they are visible,
+        //            classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
+        //            // classToRemove: 'hidden_block', // Class to remove before adding 'classToAdd' to the elements);.
+        //            offset: 400
+        //        }
+        //    );
+        //});
 
-        $(document).ready(function () {
-            $('.our-address-section').viewportChecker(
-                {
-                    classToAdd: 'visible', // Class to add to the elements when they are visible,
-                    classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
-                    // classToRemove: 'hidden_block', // Class to remove before adding 'classToAdd' to the elements);.
-                    offset: 500
-                }
-            );
-        });
+        //$(document).ready(function () {
+        //    $('.order-section').viewportChecker(
+        //        {
+        //            classToAdd: 'visible', // Class to add to the elements when they are visible,
+        //            classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
+        //            // classToRemove: 'hidden_block', // Class to remove before adding 'classToAdd' to the elements);.
+        //            offset: 450
+        //        }
+        //    );
+        //});
+
+        //$(document).ready(function () {
+        //    $('.our-address-section').viewportChecker(
+        //        {
+        //            classToAdd: 'visible', // Class to add to the elements when they are visible,
+        //            classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
+        //            // classToRemove: 'hidden_block', // Class to remove before adding 'classToAdd' to the elements);.
+        //            offset: 500
+        //        }
+        //    );
+        //});
 
         $(document).ready(function(){
             $("#main-menu").on("click", "a", function (event) {

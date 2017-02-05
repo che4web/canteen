@@ -18,7 +18,7 @@ def news_list(request):
         request,
         'newsApp/new_list.html',
         {
-            'title':u'Список новостей',
+            'title':u'Наши новости и события',
             'object_list': New.objects.all()
         }
     )
@@ -26,7 +26,7 @@ class NewsListView(ListView):
     model = New
     def get_context_data(self, **kwargs):
         context = super(NewsListView, self).get_context_data(**kwargs)
-        context['title']= u'Список новостей'
+        context['title']= u'Наши новости и события'
         return context
 
 class NewsDetailView(DetailView):

@@ -1,3 +1,4 @@
+#! -*- coding=utf-8 -*-
 from django.contrib import admin
 from newsApp.models import CategoryNews, New, New_Photos
 

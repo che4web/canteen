@@ -1,0 +1,35 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<section class="section_news">
+    <ol class="breadcrumb">
+        <li><a href="../../">Главная</a></li>
+        <li><a href="../">Наши новости</a></li>
+        <li class="active">{{ object.title }}</li>
+    </ol>
+
+    <div class="container">
+        
+        <h2>{{ object.title }}</h2>
+
+        <h2 class="section_news__date">( {{ object.date }} ) </h2>
+        
+        <div class="section_news__text">
+            <h3>{{ object.text }}</h3>
+        </div>
+        <div class="section_news__photos">
+            {%for ph in object.new_photos_set.all%}
+                <img src={{ph.get_photo}}/>
+            {%endfor%}
+            
+        </div>
+
+        
+
+    </div>
+</section>
+
+{% endblock %}

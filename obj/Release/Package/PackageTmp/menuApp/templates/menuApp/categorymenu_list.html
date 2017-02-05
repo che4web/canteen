@@ -1,0 +1,37 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<section class="our-menu">
+    <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="../">Главная</a></li>
+          <li class="active">Наше меню</li>
+        </ol>
+    
+
+        <h2 style="text-align:center"><span>{{ title }}</span></h2>
+
+        <div class="our-menu__dishes">
+            {%for ls in object_list_1%}
+                {%for category in ls%}
+                    <div class="dish-cat">
+                        <h3>{{category.title}}</h3>
+                        <div class="row dish-cat-one">
+                            {%for dsh in category.dish_set.all%}
+                                <div class="one-dish">
+                                    <img src="{{dsh.get_img}}">
+                                    <h4>{{ dsh.name }}</h4>
+                                    <h5>{{ dsh.descr }}</h5>
+                                    <div class="row dsh-price">{{ dsh.price }}</div>
+                                </div>
+                            {%endfor%}
+                        </div>
+                    </div>
+                {%endfor%}
+            {%endfor%}
+        </div>
+    </div>
+
+</section>
+{% endblock %}

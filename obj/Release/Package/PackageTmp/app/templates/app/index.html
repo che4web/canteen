@@ -1,0 +1,315 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<div class="navbar navbar-fixed-top main-navbar mdl-shadow--4dp" id="main-navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="main-menu">
+            <ul class="nav navbar-nav navbar-right main-navbar-right">
+                <li><a href="#OurMenu">Меню</a></li>
+                <li><a href="#OurNews">Новости</a></li>
+                <li class="menu-icon"><a href="#Order"><i class="fa fa-shopping-cart fa-shopping-cart-icon" aria-hidden="true"></i>Заказать</a></li>
+                <li><a href="#OurAddress">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container body-content">
+    <div class="container-fluid">
+        <div id="main-carousel" class="carousel slide" data-ride="carousel">
+            
+
+            <ol class="carousel-indicators">
+                <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#main-carousel" data-slide-to="1"></li>
+                <li data-target="#main-carousel" data-slide-to="2"></li>
+                <li data-target="#main-carousel" data-slide-to="3"></li>
+            </ol>
+
+             <div class="carousel-inner">
+                <div class="item active">
+                    <img src="../static/img_sources/carusel/1.jpg" alt="" />
+                </div>
+                <div class="item">
+                    <img src="../static/img_sources/carusel/2.jpg" alt="" />
+                </div>
+                <div class="item">
+                    <img src="../static/img_sources/carusel/3.jpg" alt="" />
+                </div>
+                <div class="item">
+                    <img src="../static/img_sources/carusel/4.jpg" alt="" />
+                </div>
+              </div>
+
+            <a class="left carousel-control" href="#main-carousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#main-carousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+        <div class="logo-main">
+            <div class="logo-main-img">
+                <img src="../static/img_sources/logo.png" />
+            </div>
+            <div class="logo-main-adress">
+                <div class="row">
+                г. Кунгур
+                </div>
+                <div class="row">
+                ул. Такая-то, д. 8
+                </div>
+                <div class="row">
+                +7 987 654 32 10
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="main-description">
+        <div class="row">
+            Столовая №1 города Кунгур предлагает лучшее обеды в рабочие часы по самым приемлимым ценам города. Унас всегда разнообразные и интересные блюда, приготовленные из домашних продуктов замечательными поварами. 
+            Мы всегда рада гостям, и ищем новых друзей. Предлагаем проведение и организацию праздников. Ждем вас в наши рабочие часы.
+        </div>
+    </section>
+    <section class="our-menu-section hidden_block mdl-shadow--4dp" id="OurMenu">
+        <h2><span>Наше меню</span></h2>
+        <div class="row our-menu-section-text">
+            <div class="col-md-6">
+                <h3>{{dishes.0.title}}</h3>
+                <ul>
+                    {%for dsh in dishes.0.dish_set.all%}
+                        <li>{{dsh.name}}</li>
+                    {%endfor%}
+                    </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>{{dishes.1.title}}</h3>
+                <ul>
+                {%for dsh in dishes.1.dish_set.all%}
+                    <li>{{dsh.name}}</li>
+                {%endfor%}
+                    </ul>
+            </div>
+        </div>
+        <div class="section-bottom">
+            <a class="btn" href="{% url 'menu-list' %}">ВСЁ МЕНЮ</a>
+        </div>
+    </section>
+    <section class="our-news-section hidden_block" id="OurNews">
+        <h2><span>Последние новости и события</span></h2>
+        <div class="our-news-section-text">
+            <div class="row main__news__topnews">
+                <div class="col-md-4 main__news__topnews_N hidden_block">
+                    <a href="{{news.0.get_absolute_url}}">
+                        {{news.0.title}}
+                        {%for ph in news.0.new_photos_set.all%}
+                            {%if ph.isDefault%}
+                                <img src={{ph.get_photo}}/>
+                            {%endif%}
+                        {%endfor%}
+                    </a>
+                </div>
+                <div class="col-md-4 main__news__topnews_N hidden_block">
+                    <a href="{{news.1.get_absolute_url}}">
+                        {{news.1.title}}
+                        {%for ph in news.1.new_photos_set.all%}
+                            {%if ph.isDefault%}
+                                <img src={{ph.get_photo}}/>
+                            {%endif%}
+                        {%endfor%}
+                    </a>
+                </div>
+                <div class="col-md-4 main__news__topnews_N hidden_block">
+                    <a href="{{news.2.get_absolute_url}}">
+                        {{news.2.title}}
+                        {%for ph in news.2.new_photos_set.all%}
+                            {%if ph.isDefault%}
+                                <img src={{ph.get_photo}}/>
+                            {%endif%}
+                        {%endfor%}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="section-bottom">
+            <a class="btn" href="{% url 'news-list' %}">ВСЕ НОВОСТИ</a>
+        </div>
+</section>
+    <section class="order-section hidden_block  mdl-shadow--4dp" id="Order">
+        <h2><span>Напишите нам</span></h2>
+        <h3>оставьте заявку на проведение праздника, расскажите о своих пожеланиях или просто оставьте свой отзыв</h3>
+        <div>
+                <form class="form-horizontal form-order" action="/sender" method="POST" role="form">
+                    
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-2 control-label">Имя</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="inputName" placeholder="имя">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputTel" class="col-sm-2 control-label">Телефон</label>
+                            <div class="col-sm-10">
+                              <input type="tel" class="form-control" id="inputTel" placeholder="телефон">
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">email</label>
+                            <div class="col-sm-10">
+                              <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDescr" class="col-sm-2 control-label">Описание</label>
+                            <div class="col-sm-10">
+                              <textarea type="text" class="form-control" id="inputDescr" placeholder="описание заказа" rows="4"></textarea>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer modal-footer-form">
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                        </div>
+                </form>
+        </div>
+</section>
+    
+
+
+</div>
+<section class="our-address-section hidden_block" id="OurAddress">
+    <h2><span>СВЯЖИТЕСЬ С НАМИ</span></h2>
+    <div class="our-address-section-text">
+        <div>
+            <address>
+                г. Кунгур<br />
+                ул. такая-то, д. такой-то<br />
+                <a href="tel:+7 (987) 654 3210">+7 (987) 654 3210</a>
+            </address>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4296.100053571176!2d56.94502677903512!3d57.42637527413549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e869c98fe7a175%3A0xa52eeb6edd54e58d!2z0JPRgNC-0YIsINC60LDRhNC1!5e0!3m2!1sru!2sru!4v1475915591497" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+</section>
+<!--
+<div class="container">
+    <div class="contact-page">
+        <div class="row contact-page-inner-1">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="contact-page-block">
+                    <a href="tel:+7(000) 654-32-10">
+                        <div class="col-md-4 contact-page__contacts__icon">
+                            <i class="glyphicon glyphicon-earphone"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="contact-page-block">
+                    <a href="vk.com">
+                        <div class="col-md-4 contact-page__contacts__icon">
+                            <i class="fa fa-vk" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="contact-page-block">
+                <a href="mailto:Support@example.com">
+                    <div class="col-md-4 contact-page__contacts__icon">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </div>
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+    -->
+
+
+
+<script>
+
+        //$(document).ready(function () {
+        //    $('.our-news-section').viewportChecker(
+        //        {
+        //            classToAdd: 'visible', // Class to add to the elements when they are visible,
+        //            classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
+        //            offset: 150
+        //        }
+        //    );
+        //});
+
+        //$(document).ready(function () {
+        //    $('.main__news__topnews_N').viewportChecker(
+        //        {
+        //            classToAdd: 'visible', // Class to add to the elements when they are visible,
+        //            classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
+        //            offset: 350
+        //        }
+        //    );
+        //});     
+
+        //$(document).ready(function () {
+        //    $('.our-menu-section').viewportChecker(
+        //        {
+        //            classToAdd: 'visible', // Class to add to the elements when they are visible,
+        //            classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
+        //            // classToRemove: 'hidden_block', // Class to remove before adding 'classToAdd' to the elements);.
+        //            offset: 400
+        //        }
+        //    );
+        //});
+
+        //$(document).ready(function () {
+        //    $('.order-section').viewportChecker(
+        //        {
+        //            classToAdd: 'visible', // Class to add to the elements when they are visible,
+        //            classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
+        //            // classToRemove: 'hidden_block', // Class to remove before adding 'classToAdd' to the elements);.
+        //            offset: 450
+        //        }
+        //    );
+        //});
+
+        //$(document).ready(function () {
+        //    $('.our-address-section').viewportChecker(
+        //        {
+        //            classToAdd: 'visible', // Class to add to the elements when they are visible,
+        //            classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
+        //            // classToRemove: 'hidden_block', // Class to remove before adding 'classToAdd' to the elements);.
+        //            offset: 500
+        //        }
+        //    );
+        //});
+
+        $(document).ready(function(){
+            $("#main-menu").on("click", "a", function (event) {
+                //отменяем стандартную обработку нажатия по ссылке
+                event.preventDefault();
+                //забираем идентификатор бока с атрибута href
+                var id  = $(this).attr('href'),
+                //узнаем высоту от начала страницы до блока на который ссылается якорь
+                top = $(id).offset().top;
+                //анимируем переход на расстояние - top за 1500 мс
+                $('body,html').animate({scrollTop: top}, 800);
+            });
+        });
+
+        
+</script>
+
+
+
+{% endblock %}

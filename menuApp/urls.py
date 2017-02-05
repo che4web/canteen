@@ -1,6 +1,11 @@
+#! -*- coding=utf-8 -*-
+
 from datetime import datetime
 from django.conf.urls import url
 import django.contrib.auth.views
+
+from django.conf.urls.static import static
+from django.conf import settings
 
 from menuApp import views
 
@@ -13,3 +18,4 @@ urlpatterns = [
     url(r'^$', views.DishesListView.as_view(), name='menu-list'),
    
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -2,7 +2,7 @@
 """
 Definition of views.
 """
-
+from app import forms
 from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
@@ -10,6 +10,9 @@ from datetime import datetime
 from newsApp.models import New
 from menuApp.models import CategoryMenu
 #from app.models import New
+
+#from forms import ContactForm
+#from django.views.generic.edit import FormView
 
 from django.views.generic import ListView, DetailView
 def home(request):
@@ -50,3 +53,23 @@ def about(request):
             'year':datetime.now().year,
         }
     )
+
+#class ContactView(FormView):
+#    template_name = 'contact.html'
+#    form_class = ContactForm
+#    success_url = '/thanks/'
+
+#    def form_valid(self, form):
+#        # This method is called when valid form data has been POSTed.
+#        # It should return an HttpResponse.
+#        form.send_email()
+#        return HttpResponse('{"data": "OK"}')
+
+#    def form_invalid(self, form):
+#        errors_dict = json.dumps(dict([(k, [e for e in v]) for k, v in form.errors.items()]))
+#        #error_list=[]
+#        #for k, v in form.errors.items():
+#        #    for e in v:
+#        #        error_list.append(e)
+#        #errors_dict =','.join(error_list)
+#        return HttpResponseBadRequest(errors_dict)

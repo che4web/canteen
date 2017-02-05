@@ -1,3 +1,5 @@
+#! -*- coding=utf-8 -*-
+
 """
 Definition of urls for Canteen_test1.
 """
@@ -6,7 +8,10 @@ from datetime import datetime
 from django.conf.urls import url
 import django.contrib.auth.views
 
-import app.forms
+from django.conf.urls.static import static
+from django.conf import settings
+
+from app import forms
 import app.views
 
 # Uncomment the next lines to enable the admin:
@@ -21,6 +26,7 @@ urlpatterns = [
     url(r'^news/', include('newsApp.urls')),
     url(r'^contact$', app.views.contact, name='contact'),
     url(r'^about', app.views.about, name='about'),
+    #url(r'^sender', app.views.ContactView.as_view(), name='sender'),
     #url(r'^new$', app.views.news_list, name='news-list'),
     #url(r'^new/(?P<pk>\d+)/$', app.views.NewsDetailView.as_view(), name='news-detail'),
     #url(r'^new2$', app.views.NewsListView.as_view(), name='news-list2'),
@@ -49,3 +55,5 @@ urlpatterns = [
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

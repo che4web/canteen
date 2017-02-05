@@ -1,6 +1,11 @@
+#! -*- coding=utf-8 -*-
+
 from datetime import datetime
 from django.conf.urls import url
 import django.contrib.auth.views
+
+from django.conf.urls.static import static
+from django.conf import settings
 
 from newsApp import views
 
@@ -14,3 +19,5 @@ urlpatterns = [
     url(r'^(?P<pk>\d+)/$', views.NewsDetailView.as_view(), name='news-detail'),
     url(r'^news2$', views.NewsListView.as_view(), name='news-list2'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

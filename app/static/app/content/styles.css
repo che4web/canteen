@@ -267,7 +267,8 @@ section h2 span{
 
 /*section PART*/
 
-.our-menu-section-text, .our-address-section-text, .our-news-section-text{
+.our-menu-section-text, .our-address-section-text, 
+.our-news-section-text, .order-section h3{
     font-family: 'Lobster', cursive;
     font-size: 20px;
     text-align: center;
@@ -294,6 +295,7 @@ section h2 span{
 .main__news__topnews_N{
     font-size:24px;
     transform:scale(0.6,0.6);
+    transition:all 2s;
 }
 .main__news__topnews_N:hover{
     transform:scale(1,1);
@@ -344,6 +346,13 @@ section h2 span{
 
 .form-order .form-control{
     max-width:90%;
+}
+
+.order-section h2{
+    margin-bottom: 3%;
+}
+.order-section h3{
+    margin-bottom: 5%;
 }
 
 /*CONTACTS*down*/
@@ -466,12 +475,20 @@ section h2 span{
 }
 
 .one-dish img {
-    height: auto;
-    width: 100%;
-    /*max-width: 25%;*/
-    /*max-height: 30px;*/
-    background-size: cover;
     padding: 1%;
+
+    /*height: auto;*/
+    width: 100%;
+    /*max-width: 200px;
+    max-height: 700px;*/
+    /*max-width: 250px;*/
+    /*max-height: 400px;*/
+    height: 200px;
+    width: 250px;
+    background-size: cover;
+    border: 2px solid #6F5858;
+    border-radius: 5%;
+
 }
 
 .dsh-price{
@@ -485,7 +502,7 @@ section h2 span{
     padding:0 20%;
 }
 
-.mdl-shadow--4dp {
+/*.mdl-shadow--4dp {
     box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
     background-color: #fff;
-}
+}*/

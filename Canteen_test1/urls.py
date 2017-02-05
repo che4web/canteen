@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^news/', include('newsApp.urls')),
     url(r'^contact$', app.views.contact, name='contact'),
     url(r'^about', app.views.about, name='about'),
-    #url(r'^sender', app.views.ContactView.as_view(), name='sender'),
+    url(r'^sender', app.views.ContactView.as_view(), name='sender'),
     #url(r'^new$', app.views.news_list, name='news-list'),
     #url(r'^new/(?P<pk>\d+)/$', app.views.NewsDetailView.as_view(), name='news-detail'),
     #url(r'^new2$', app.views.NewsListView.as_view(), name='news-list2'),

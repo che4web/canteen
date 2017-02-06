@@ -15,16 +15,18 @@
         </div>
         <div class="navbar-collapse collapse" id="main-menu">
             <ul class="nav navbar-nav navbar-right main-navbar-right">
-                <li><a href="#OurMenu">Меню</a></li>
-                <li><a href="#OurNews">Новости</a></li>
-                <li class="menu-icon"><a href="#Order"><i class="fa fa-shopping-cart fa-shopping-cart-icon" aria-hidden="true"></i>Заказать</a></li>
+                <li class="first"><a  href="#Home">Домой</a></li>
+                <li class="first"><a href="#OurMenu">Меню</a></li>
+                <li class="second"><a href="#OurNews">Новости</a></li>
+                <!--<li class="menu-icon"><a href="#Order"><i class="fa fa-shopping-cart fa-shopping-cart-icon" aria-hidden="true"></i>Заказать</a></li>-->
+                <li><a href="#Order">Заказать</a></li>
                 <li><a href="#OurAddress">Контакты</a></li>
             </ul>
         </div>
     </div>
 </div>
 <div class="container body-content">
-    <div class="container-fluid">
+    <div class="container-fluid" id="Home">
         <div id="main-carousel" class="carousel slide" data-ride="carousel">
             
 
@@ -61,23 +63,23 @@
             <div class="logo-main-img">
                 <img src="../static/img_sources/logo.png" />
             </div>
+
             <div class="logo-main-adress">
                 <div class="row">
-                г. Кунгур
+                {{basicdata.city}}
                 </div>
                 <div class="row">
-                ул. Такая-то, д. 8
+                {{basicdata.street_home}}
                 </div>
                 <div class="row">
-                +7 987 654 32 10
+                {{basicdata.tel}}
                 </div>
             </div>
         </div>
     </div>
-    <section class="main-description">
+    <section class="main-description" id="Home">
         <div class="row">
-            Столовая №1 города Кунгур предлагает лучшее обеды в рабочие часы по самым приемлимым ценам города. Унас всегда разнообразные и интересные блюда, приготовленные из домашних продуктов замечательными поварами. 
-            Мы всегда рада гостям, и ищем новых друзей. Предлагаем проведение и организацию праздников. Ждем вас в наши рабочие часы.
+            {{basicdata.main_descr}}
         </div>
     </section>
     <section class="our-menu-section hidden_block mdl-shadow--4dp" id="OurMenu">
@@ -146,7 +148,7 @@
 </section>
     <section class="order-section hidden_block  mdl-shadow--4dp" id="Order">
         <h2><span>Напишите нам</span></h2>
-        <h3>оставьте заявку на проведение праздника, расскажите о своих пожеланиях или просто оставьте свой отзыв</h3>
+        <h3>{{basicdata.contact_text}}</h3>
         <div>
                 <form class="form-horizontal form-order" action="/sender" method="POST" role="form">
                     {%csrf_token%}
@@ -192,9 +194,9 @@
     <div class="our-address-section-text">
         <div>
             <address>
-                г. Кунгур<br />
-                ул. такая-то, д. такой-то<br />
-                <a href="tel:+7 (987) 654 3210">+7 (987) 654 3210</a>
+                {{basicdata.city}}<br />
+                {{basicdata.street_home}}<br />
+                <a href="tel:{{basicdata.tel}}"> {{basicdata.tel}}</a>
             </address>
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4296.100053571176!2d56.94502677903512!3d57.42637527413549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e869c98fe7a175%3A0xa52eeb6edd54e58d!2z0JPRgNC-0YIsINC60LDRhNC1!5e0!3m2!1sru!2sru!4v1475915591497" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>

@@ -2,6 +2,13 @@
     background-color:#f3f0e9;
 }
 
+@media (max-width: 768px) {
+    .container-fluid {
+        margin-top: 50px;
+    }
+}
+
+
 .container.contact{
         border-top: 1px solid #ff7c90;
 }
@@ -35,34 +42,35 @@
     padding-left:20%;
 }*/
 
+
+/*.menu-icon{
+    margin-top:-1%;
+}
+
+
+.fa-shopping-cart-icon{
+    display:initial;
+    padding-right:5%;
+}*/
+
 .main-navbar .active > a:after {
-    display: block;
+    /*display: block;
     content: "";
-    height: 3px;
+    height: 4px;
     width: 100%;
     background-color: #ff7c90;
-    margin-top:8%;
+    margin-top:8%;*/
 
     opacity: 1;
     transition: opacity 0.5s linear;
 
 }
 
-.main-navbar .menu-icon.active > a:after {
-    margin-top:6%;
 
-}
-
-.fa-shopping-cart-icon{
-    display:initial;
-    padding-right:5%;
-}
-
-
-.main-navbar-right > li > a:after {
+.main-navbar a:after {
     display: block;
     content: "";
-    height: 3px;
+    height: 4px;
     width: 100%;
     background-color: #ff7c90;
     margin-top:8%;
@@ -72,20 +80,32 @@
 
 }
 
-/*.main-navbar-right > li:last-child > a:after{
-    margin-top:2%;
+
+
+
+/*.main-navbar-right > li:first-child > a:after{
+    margin-top:10%;
 }*/
 
-.menu-icon{
-    margin-top:-1%;
+/*.main-navbar .menu-icon > a:after {
+    margin-top:6%;
+    height: 5px;
+}*/
+
+
+
+.first a:after{
+    margin-top:13%;
 }
 
-.menu-icon > li > a:after{
-    margin-top:-1%;
+.second a:after{
+    margin-top:9%;
 }
 
-.main-navbar-right > li > a:hover:after,
-.main-navbar-right > li > a:focus:after {
+.main-navbar a:hover:after
+/*.main-navbar-right > li > a:hover:after,
+.main-navbar-right > li > a:focus:after*/ 
+{
     opacity: 1;
 }
 
@@ -123,6 +143,7 @@
     padding:10%;
     text-align:center;
     font-size: 38px;
+    color: #f3f0e9;
 }
 
 .main-description{
@@ -137,6 +158,21 @@
     .logo-main-adress {
         font-size: 30px;
     }
+}
+@media (max-width: 1566px) {
+    .logo-main {
+        height: 63%;
+    }
+}
+
+@media (max-width: 1447px) {
+    .logo-main-adress {
+        font-size: 24px;
+    }
+    .logo-main {
+        height: 46%;
+    }
+        
 }
 
 @media (max-width: 990px) {
@@ -203,7 +239,7 @@
 }
 
 
-@media (max-width: 450px) {
+@media (max-width: 502px) {
     .main-description {
         margin-top: 58%;
     }
@@ -211,6 +247,18 @@
         height:30%;
     }
 }
+
+/*iPhone 5:*/
+@media screen and (device-aspect-ratio: 40/71) {
+   .logo-main{
+        height:30%;
+    }
+   .logo-main-adress
+   {
+    font-size: 14px;
+    }
+}
+
 
 /*MAIN PART*/
 
@@ -245,6 +293,7 @@ section h2{
     background: transparent;
     margin-bottom:7%;
     margin-top:5%;
+    line-height:1.5;
 }
 
 section h2 span{
@@ -458,7 +507,7 @@ section h2 span{
     color: #6F5858;
  }
 
-.our-menu{
+.our-menu, .our-news, .section_news{
     padding-top:0;
 }
 
@@ -499,10 +548,22 @@ section h2 span{
 }
 
 .contact-page-inner-1{
-    padding:0 20%;
+    padding:0 28%;
 }
 
 /*.mdl-shadow--4dp {
     box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
     background-color: #fff;
+}*/
+
+/*.home-item {
+    /*display:block;
+    opacity: 1;
+    transition: opacity 0.9s linear;
+}
+
+.home-item.active{
+    /*display:none;
+    opacity: 0;
+    transition: opacity 0.5s linear;
 }*/

@@ -3,6 +3,7 @@
 Definition of views.
 """
 from app import forms
+from app import models
 from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
@@ -10,7 +11,7 @@ from datetime import datetime
 
 from newsApp.models import New
 from menuApp.models import CategoryMenu
-#from app.models import New
+from app.models import BasicData
 
 from django.shortcuts import HttpResponse
 import json
@@ -28,7 +29,8 @@ def home(request):
         'app/index.html',
         {
             'news':New.objects.all().order_by('-date')[0:3],
-            'dishes':[CategoryMenu.objects.get(title=u'Горячее'),CategoryMenu.objects.get(title=u'Гарниры')]
+            'dishes':[CategoryMenu.objects.get(title=u'Горячее'),CategoryMenu.objects.get(title=u'Гарниры')],
+            'basicdata':BasicData.objects.all()[0]
             #'title':'Home Page',
         }
     )
@@ -78,3 +80,14 @@ class ContactView(FormView):
         #        error_list.append(e)
         #errors_dict =','.join(error_list)
         return HttpResponseBadRequest(errors_dict)
+
+#class BasicDataList(ListView):
+#    model = BasicData
+#    def get_context_data(self, **kwargs):
+#        context = super(BasicDataList, self).get_context_data(**kwargs)
+#        object_ls= self.model.objects.all()
+#        context['objects']=object_ls
+#        return context
+
+#class BasicDataView(DetailView):
+#    model = BasicData

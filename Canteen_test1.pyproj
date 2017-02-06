@@ -186,6 +186,7 @@
     <Content Include="app\static\img_sources\carusel_back\Back_left.png" />
     <Content Include="app\static\img_sources\carusel_back\Back_right.jpg" />
     <Content Include="app\static\img_sources\carusel_back\Back_right.png" />
+    <Content Include="app\static\img_sources\favico.png" />
     <Content Include="app\static\img_sources\holiday.jpg" />
     <Content Include="app\static\img_sources\holyday\no_photo.jpg" />
     <Content Include="app\static\img_sources\ornament\dawn_n.png" />
@@ -199,6 +200,7 @@
     <Content Include="app\static\img_sources\carusel\slider2.jpg" />
     <Content Include="app\static\img_sources\carusel\slider3.jpg" />
     <None Include="canteen.pubxml" />
+    <Content Include="app\templates\app\mail_detail.html" />
     <Content Include="app\templates\contact.html" />
     <Content Include="menuApp\templates\index.html" />
     <Content Include="menuApp\templates\menuApp\categorymenu_list.html" />

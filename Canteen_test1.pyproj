@@ -186,7 +186,6 @@
     <Content Include="app\static\img_sources\carusel_back\Back_left.png" />
     <Content Include="app\static\img_sources\carusel_back\Back_right.jpg" />
     <Content Include="app\static\img_sources\carusel_back\Back_right.png" />
-    <Content Include="app\static\img_sources\favico.png" />
     <Content Include="app\static\img_sources\holiday.jpg" />
     <Content Include="app\static\img_sources\holyday\no_photo.jpg" />
     <Content Include="app\static\img_sources\ornament\dawn_n.png" />

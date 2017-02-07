@@ -114,11 +114,10 @@
 .logo-main{
     position:absolute;
     width:20%;
-    height:55%;
+    height:60%;
     background-color:rgba(0,0,0,0.5);
     top:30%;
     left:25%;
-    color:#fff;
 }
 
 
@@ -142,7 +141,7 @@
 .logo-main-adress{
     padding:10%;
     text-align:center;
-    font-size: 38px;
+    font-size: 35px;
     color: #f3f0e9;
 }
 
@@ -151,7 +150,7 @@
     color: #6F5858;
     font-family: 'Lobster', cursive;
     font-size: 20px;
-    margin-top:15%;
+    margin-top:18%;
 }
 
 @media (max-width: 1701px) {
@@ -182,6 +181,7 @@
     .logo-main {
         height: 32%;
     }
+
 }
 
 
@@ -193,8 +193,6 @@
     background-color:rgba(0,0,0,0.5);
     top:15%;
     left:10%;
-    color:#fff;
-
 }
 .logo-main-img, .logo-main-adress{
     max-height:50%;
@@ -251,11 +249,42 @@
 /*iPhone 5:*/
 @media screen and (device-aspect-ratio: 40/71) {
    .logo-main{
-        height:30%;
+        height:40%;
     }
    .logo-main-adress
    {
     font-size: 14px;
+    }
+   .main-description {
+    margin-top: 40%;
+}
+}
+
+/*iPhone 6:*/
+@media screen and (device-aspect-ratio: 375/667) {
+    .logo-main {
+        height: 44%;
+    }
+    .main-description {
+        margin-top: 47%;
+    }
+}
+
+/*iPhone 6 Plus:*/
+@media screen and (device-aspect-ratio: 16/9) and (max-device-width : 1024px) {
+    .logo-main {
+        height: 42%;
+    }
+    .main-description {
+    margin-top: 50%;
+    }
+}
+
+/*iPad:*/
+@media screen and (device-aspect-ratio: 3/4) {
+    .main-description 
+    {
+        margin-top: 16%;
     }
 }
 

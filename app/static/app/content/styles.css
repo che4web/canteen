@@ -341,13 +341,18 @@ section h2 span{
 }
 /*main page menu PART*/
 
+.our-news-section-text{
+    margin-bottom: 2%;
+}
+
 .main__news__topnews_N{
-    font-size:24px;
-    transform:scale(0.6,0.6);
+    font-size:18px;
+    transform:scale(1,1);
     transition:all 2s;
+    padding: 0 5%;
 }
 .main__news__topnews_N:hover{
-    transform:scale(1,1);
+    transform:scale(1.5,1.5);
     transition:all 1s;
 }
 

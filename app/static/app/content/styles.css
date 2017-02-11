@@ -249,7 +249,7 @@
 /*iPhone 5:*/
 @media screen and (device-aspect-ratio: 40/71) {
    .logo-main{
-        height:40%;
+        height:60%;
     }
    .logo-main-adress
    {
@@ -263,7 +263,7 @@
 /*iPhone 6:*/
 @media screen and (device-aspect-ratio: 375/667) {
     .logo-main {
-        height: 44%;
+        height: 65%;
     }
     .main-description {
         margin-top: 47%;

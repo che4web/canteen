@@ -17,7 +17,7 @@
     margin-top:5%;
 }*/
 
-.main-navbar, .logo-main{
+.main-navbar, .logo-main, .logo-main-sm{
     font-family: Arial;
 }
 
@@ -120,6 +120,15 @@
     left:25%;
 }
 
+.logo-main-sm {
+    background-color:rgba(0,0,0,0.5);
+        padding: 2%;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 2%;
+    margin-top: -18%;
+}
+
 
 
 
@@ -129,6 +138,10 @@
 
 .logo-main-img{
     padding: 15% 25% 0 25%;
+}
+
+.logo-main-sm .logo-main-img{
+    padding: 0%;
 }
 
 .logo-main-img img {
@@ -143,6 +156,10 @@
     text-align:center;
     font-size: 35px;
     color: #f3f0e9;
+}
+
+.logo-main-sm .logo-main-adress{
+    padding:0%;
 }
 
 .main-description{

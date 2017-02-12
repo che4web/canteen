@@ -73,7 +73,7 @@
                 <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
         </div>
-        <div class="logo-main">
+        <div class="logo-main visible-lg-block">
             <div class="logo-main-img">
                 <img src="../static/img_sources/logo.png" />
             </div>
@@ -92,6 +92,25 @@
         </div>
     </div>
     <section class="main-description" id="Home">
+        <div class="logo-main-sm hidden-lg row">
+            <div class="logo-main-img col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <img src="../static/img_sources/logo.png" />
+            </div>
+
+            <div class="logo-main-adress  col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                <div class="">
+                    {{basicdata.city}}
+                </div>
+                <div class="">
+                    {{basicdata.street_home}}
+                </div>
+                <div class="">
+                    {{basicdata.tel}}
+                </div>
+            </div>
+        </div>
+
+
     <div class="row">
         {{basicdata.main_descr}}
     </div>

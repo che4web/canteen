@@ -122,11 +122,11 @@
 
 .logo-main-sm {
     background-color:rgba(0,0,0,0.5);
-        padding: 2%;
+    padding: 2%;
     width: 80%;
     margin: 0 auto;
     border-radius: 2%;
-    margin-top: -18%;
+    margin-top: -10%;
 }
 
 
@@ -157,6 +157,11 @@
     font-size: 35px;
     color: #f3f0e9;
 }
+
+.logo-main-sm .logo-main-adress{
+    text-align:right;
+}
+
 
 .logo-main-sm .logo-main-adress{
     padding:0%;
@@ -241,7 +246,7 @@
 }
 }
 
-@media (max-width: 690px) {
+/*@media (max-width: 690px) {
     .main-description {
         margin-top: 30%;
     }
@@ -261,7 +266,7 @@
     .logo-main{
         height:30%;
     }
-}
+}*/
 
 /*iPhone 5:*/
 @media screen and (device-aspect-ratio: 40/71) {

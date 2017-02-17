@@ -21,7 +21,7 @@
         </div>
         <div class="section_news__photos">
             {%for ph in object.new_photos_set.all%}
-                <img src={{ph.get_photo}}/>
+                <img src="{{ph.get_photo}}"/>
             {%endfor%}
             
         </div>

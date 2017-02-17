@@ -25,7 +25,7 @@
                     {%for ph in new.new_photos_set.all%}
                             {%if ph.isDefault%}
                                 <a href="{{new.get_absolute_url}}">
-                                    <img src={{ph.get_photo}}/>
+                                    <img src="{{ph.get_photo}}"/>
                                 </a>
                             {%endif%}
                     {%endfor%}

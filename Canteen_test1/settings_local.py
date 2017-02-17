@@ -34,9 +34,9 @@ EMAIL_FILE_PATH = 'app-messages'
 SECRET_KEY = '02ca4e46-3645-4edf-83ed-389dadff2907'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['stolov1kungur.ru','test2.4web.tech']
 
 
 # Application definition
@@ -135,7 +135,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+STATIC_ROOT = '/var/www/stolov1kungur.ru/static'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/var/www/test/canteen/media'
+MEDIA_ROOT = '/var/www/stolov1kungur.ru/media'

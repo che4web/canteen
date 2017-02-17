@@ -148,7 +148,7 @@
                     {{news.0.title}}
                     {%for ph in news.0.new_photos_set.all%}
                     {%if ph.isDefault%}
-                    <img src={{ph.get_photo}}/>
+                    <img src={{ph.get_photo}}>
                     {%endif%}
                     {%endfor%}
                 </a>
@@ -158,7 +158,7 @@
                     {{news.1.title}}
                     {%for ph in news.1.new_photos_set.all%}
                     {%if ph.isDefault%}
-                    <img src={{ph.get_photo}}/>
+                    <img src={{ph.get_photo}}>
                     {%endif%}
                     {%endfor%}
                 </a>
@@ -168,7 +168,7 @@
                     {{news.2.title}}
                     {%for ph in news.2.new_photos_set.all%}
                     {%if ph.isDefault%}
-                    <img src={{ph.get_photo}}/>
+                    <img src={{ph.get_photo}}>
                     {%endif%}
                     {%endfor%}
                 </a>

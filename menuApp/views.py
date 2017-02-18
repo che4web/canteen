@@ -5,6 +5,7 @@ from django.template import RequestContext
 from datetime import datetime
 from menuApp.models import Dish
 from menuApp.models import CategoryMenu
+from app.models import BasicData
 
 from django.views.generic import ListView, DetailView
 
@@ -29,6 +30,7 @@ class DishesListView(ListView):
         #context['object_list_2']= object_ls[len(object_ls)/2:]
         context['object_list_1']=[object_ls[0:int(len(object_ls)/2)], object_ls[int(len(object_ls)/2):]]
         context['title']= u'НАШЕ МЕНЮ'
+        context['basicdata']=BasicData.objects.all()[0]
         return context
 
 class DishesDetailView(DetailView):

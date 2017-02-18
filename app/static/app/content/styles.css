@@ -113,11 +113,11 @@
 
 .logo-main{
     position:absolute;
-    width:20%;
+    width:21%;
     height:60%;
     background-color:rgba(0,0,0,0.5);
     top:30%;
-    left:25%;
+    left:26%;
 }
 
 .logo-main-sm {
@@ -126,7 +126,8 @@
     width: 80%;
     margin: 0 auto;
     border-radius: 2%;
-    margin-top: -10%;
+    margin-top: -15%;
+    margin-bottom: 10px;
 }
 
 
@@ -154,7 +155,7 @@
 .logo-main-adress{
     padding:10%;
     text-align:center;
-    font-size: 35px;
+    font-size: 31px;
     color: #f3f0e9;
 }
 
@@ -188,10 +189,12 @@
 
 @media (max-width: 1447px) {
     .logo-main-adress {
-        font-size: 24px;
+        font-size: 22px;
     }
     .logo-main {
         height: 46%;
+        top: 44%;
+        left: 20%;
     }
         
 }
@@ -333,6 +336,8 @@ section{
     background-color:#ff7c90;
     color:#f3f0e9;
     font-size: 12px!important;
+    margin-left: -3px;
+    margin-top: -1px;
 }
 
 section h2{

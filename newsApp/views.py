@@ -8,6 +8,7 @@ from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
 from newsApp.models import New
+from app.models import BasicData
 
 from django.views.generic import ListView, DetailView
 
@@ -19,7 +20,8 @@ def news_list(request):
         'newsApp/new_list.html',
         {
             'title':u'Наши новости и события',
-            'object_list': New.objects.all()
+            'object_list': New.objects.all().order_by('-date'),
+            'basicdata':BasicData.objects.all()[0]
         }
     )
 class NewsListView(ListView):

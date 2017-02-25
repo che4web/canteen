@@ -3,9 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Столовая № 1 Кунгур</title>
+    <meta name="description" content="Столовая № 1 в городе Кунгур. |Вкусные обеды, домашняя кухня, лучшие цены, организация праздников, банкетов. Пермский край, г. Кунгур.| Звоните +7 (961) 75-68-376 |">
+    <meta name="keywords" content="Столовая № 1 в городе Кунгур. |Вкусные обеды, домашняя кухня, лучшие цены, организация праздников, банкетов. Пермский край, г. Кунгур.| Звоните +7 (961) 75-68-376 |столовая |один |кунгур |еда |поесть |обеды |обед |праздники |свадьбы |похороны |поминки |организация |банкеты |">
     {% load staticfiles %}
+    {% block headblock %}
+        <title>Столовая № 1 Кунгур | Вкусные обеды, домашняя кухня, лучшие цены, организация праздников, банкетов</title>
+    {% endblock %}
     <link href="{% static 'img_sources/favicon.ico' %}" rel="icon" type="image/ico">
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'app/font-awesome/css/font-awesome.min.css' %}">
@@ -21,6 +24,7 @@
      <script src="{% static 'app/scripts/jquery.form.min.js' %}"></script>
     
 </head>
+
 
 <body data-spy="scroll" data-target="#main-navbar">
     {% block content %}{% endblock %}
